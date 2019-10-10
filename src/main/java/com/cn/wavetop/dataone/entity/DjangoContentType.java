@@ -20,7 +20,8 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DjangoContentType {
-
+  @Id // 标识主键
+  @GeneratedValue(strategy = GenerationType.IDENTITY) // 自定义生成
   private long id;
   private String appLabel;
   private String model;
