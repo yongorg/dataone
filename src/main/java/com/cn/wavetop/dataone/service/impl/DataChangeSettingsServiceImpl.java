@@ -4,6 +4,7 @@ import com.cn.wavetop.dataone.dao.DataChangeSettingsRespository;
 import com.cn.wavetop.dataone.dao.UserRepository;
 import com.cn.wavetop.dataone.entity.DataChangeSettings;
 import com.cn.wavetop.dataone.entity.UserTest;
+import com.cn.wavetop.dataone.entity.vo.ToData;
 import com.cn.wavetop.dataone.service.DataChangeSettingsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ public class DataChangeSettingsServiceImpl implements DataChangeSettingsService 
     private DataChangeSettingsRespository repository;
 
     @Override
-    public List<DataChangeSettings> getDataChangeSettingsAll() {
-        return repository.findAll();
+    public ToData getDataChangeSettingsAll() {
+        return ToData.builder().status("1").data( repository.findAll()).build();
     }
 }

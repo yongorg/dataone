@@ -29,7 +29,7 @@ public class DataChangeSettingsController {
     @ApiImplicitParam(name = "username",value = "",dataType = "String")
     @GetMapping("/data_change_all")
     public ToData data_change_all() {
-        return ToData.builder().status("1").data(service.getDataChangeSettingsAll()).build();
+        return service.getDataChangeSettingsAll();
     }
 
 

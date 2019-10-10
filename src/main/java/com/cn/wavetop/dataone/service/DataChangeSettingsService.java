@@ -1,6 +1,7 @@
 package com.cn.wavetop.dataone.service;
 
 import com.cn.wavetop.dataone.entity.DataChangeSettings;
+import com.cn.wavetop.dataone.entity.vo.ToData;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -15,5 +16,5 @@ import java.util.List;
 
 public interface DataChangeSettingsService {
 
-  List<DataChangeSettings> getDataChangeSettingsAll();
+  ToData getDataChangeSettingsAll();
 }

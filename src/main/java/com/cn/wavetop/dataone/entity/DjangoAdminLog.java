@@ -21,6 +21,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 
 public class DjangoAdminLog {
+
   @Id // 标识主键
   @GeneratedValue(strategy = GenerationType.IDENTITY) // 自定义生成
   private long id;
@@ -31,6 +32,5 @@ public class DjangoAdminLog {
   private String changeMessage;
   private long contentTypeId;
   private long userId;
-
 
 }
