@@ -15,9 +15,8 @@ import java.util.List;
 public interface DataChangeSettingsRespository extends JpaRepository<DataChangeSettings,Long> {
     /**
      * 根据用户名查找
-     * @param username
      * @return
      */
     //@Query(value = "select * from user", nativeQuery = true)
-    List<DataChangeSettings> findAll(String username);
+    List<DataChangeSettings> findAll();
 }
