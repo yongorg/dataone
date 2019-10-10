@@ -1,6 +1,7 @@
 package com.cn.wavetop.dataone.controller;
 
 import com.cn.wavetop.dataone.entity.DataChangeSettings;
+import com.cn.wavetop.dataone.entity.vo.ToData;
 import com.cn.wavetop.dataone.service.DataChangeSettingsService;
 import com.cn.wavetop.dataone.service.UserService;
 import io.swagger.annotations.ApiImplicitParam;
@@ -27,8 +28,8 @@ public class DataChangeSettingsController {
     @ApiOperation(value = "",httpMethod = "GET",protocols = "HTTP",produces = "application/json",notes = "查询用户信息")
     @ApiImplicitParam(name = "username",value = "",dataType = "String")
     @GetMapping("/data_change_all")
-    public List<DataChangeSettings> data_change_all() {
-        return service.getDataChangeSettingsAll();
+    public ToData data_change_all() {
+        return ToData.builder().status("1").data(service.getDataChangeSettingsAll()).build();
     }
 
 
