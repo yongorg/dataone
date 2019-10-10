@@ -19,5 +19,5 @@ public interface DataChangeSettingsRespository extends JpaRepository<DataChangeS
      * @return
      */
     //@Query(value = "select * from user", nativeQuery = true)
-    List<User> findAll(String username);
+    List<DataChangeSettings> findAll(String username);
 }
