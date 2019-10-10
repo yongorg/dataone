@@ -24,4 +24,10 @@ public class DataChangeSettingsServiceImpl implements DataChangeSettingsService 
     public ToData getDataChangeSettingsAll() {
         return ToData.builder().status("1").data( repository.findAll()).build();
     }
+
+    @Override
+    public ToData getCheckDataChangeByjobid(String job_id) {
+        repository.findByJobId(job_id);
+        return null;
+    }
 }

@@ -17,4 +17,6 @@ import java.util.List;
 public interface DataChangeSettingsService {
 
   ToData getDataChangeSettingsAll();
+
+  ToData getCheckDataChangeByjobid(String job_id);
 }
